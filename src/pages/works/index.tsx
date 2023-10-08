@@ -33,7 +33,7 @@ function Works() {
                 stiffness: 100,
               },
             }}
-            className="info tracking-wide md:text-base text-sm uppercase text-center text-zinc-200"
+            className="info tracking-wide sm:text-sm text-xs uppercase text-center text-gray-200"
           >
             {WORKS[lan].info}
           </motion.p>

@@ -11,6 +11,7 @@ import GlobalContext from "../../context/GlobalContext";
 import { ABOUT } from "../../constants/data";
 import Shape from "../../components/Shape";
 import Overlay from "../../components/Overlay";
+import { AltButton } from "../../components/button/index";
 
 function About() {
   const variant = {
@@ -21,33 +22,15 @@ function About() {
   const [ref, inView] = useInView();
   const { lan } = GlobalContext();
   return (
-    <div className="overflow-hidden py-24 about bg-gradient_main">
-      <div className="relative pb-20">
-        {/* <motion.div
-        className="absolute opacity-40 bottom-0 left-0 w-[500px]"
-        initial={{
-          y: 0,
-        }}
-        animate={{
-          y: -50,
-          transition: {
-            repeat: Infinity,
-            duration: 4,
-            repeatType: "reverse",
-          },
+    <div className="overflow-hidden about bg-gradient_main">
+      <div
+        className="relative overflow-hidden pt-24 bg-cover"
+        style={{
+          backgroundImage: "url('assets/bg2.jpg')",
         }}
       >
-        <img
-          src="assets/about_item.png"
-          alt=""
-          width={100}
-          className="w-full h-full object-cover"
-        />
-      </motion.div> */}
-        {/* <div className="absolute right-10 top-10">
-        <Shape />
-      </div> */}
-        <div className="absolute left-0 bottom-10 opacity-60 z-10">
+        <div className="absolute w-full h-full top-0 left-0 bg-gradient_main opacity-90 z-10"></div>
+        <div className="absolute left-0 bottom-0 opacity-60 z-10">
           <img src="assets/sketch.png" alt="" width={900} />
         </div>
         <Container>
@@ -55,9 +38,8 @@ function About() {
             <SectionTitle title={ABOUT[lan].title} />
             <div className="flex justify-center items-center gap-8 lg:gap-10 mb-60 lg:flex-row flex-col ">
               <div className="flex flex-col gap-6 lg:max-w-[700px] w-full flex-1 relative z-20 lg:pr-10 lg:py-10 order-1 lg:-order-1">
-                <div className="absolute w-full h-full bg-gradient_main opacity-30"></div>
                 <div
-                  className={`cool md:text-5xl text-3xl w-fit text-alt font-extrabold flex flex-col relative gap-1 text-center lg:text-start ${
+                  className={`sm:text-3xl text-xl w-fit text-white flex flex-col relative gap-1 text-center lg:text-start ${
                     lan === "ar" ? "lg:ml-auto lg:m-0 m-auto" : "lg:m-0 m-auto"
                   }`}
                 >
@@ -106,7 +88,7 @@ function About() {
                       stiffness: 100,
                     },
                   }}
-                  className="relative text-sm md:text-base uppercase tracking-wide text-zinc-200 text-center lg:text-start"
+                  className="relative sm:text-sm text-xs uppercase tracking-wide text-gray-200 text-center lg:text-start"
                 >
                   {ABOUT[lan].info}
                 </motion.p>
@@ -173,17 +155,12 @@ function About() {
         </Container>
       </div>
       <div
-        className="relative pb-2 bg-contain bg-no-repeat bg-right"
-        // style={{
-        //   backgroundImage: "url('assets/pattern.png')",
-        // }}
+        className="relative pb-24 pt-24 bg-cover"
+        style={{
+          backgroundImage: 'url("assets/bg3.jpg")',
+        }}
       >
-        <div
-          className="absolute w-full h-full left-0 top-0 bg-right bg-contain bg-no-repeat lg:flex hidden opacity-20"
-          style={{
-            backgroundImage: "url('assets/pattern.png')",
-          }}
-        ></div>
+        {/* <div className="absolute w-full h-full left-0 top-0 bg-right bg-contain bg-no-repeat lg:flex hidden opacity-20"></div> */}
         {/* <div className="absolute top-1/2 -translate-y-1/2 right-10">
           <Shape />
         </div> */}
@@ -207,8 +184,9 @@ function About() {
             className="w-full h-full object-cover z-10"
           />
         </motion.div>
+        <div className="absolute w-full h-full top-0 left-0 bg-gradient_main opacity-90 z-10"></div>
         <Container>
-          <div className="flex justify-center items-center gap-8 lg:gap-10 mb-60 lg:flex-row flex-col">
+          <div className="flex justify-center items-center gap-8 lg:gap-10 lg:flex-row flex-col">
             <div className="flex lg:flex-col flex-row justify-center gap-10 items-center">
               <motion.div
                 whileInView={{
@@ -243,8 +221,8 @@ function About() {
             </div>
             <div className="flex flex-col gap-6 lg:max-w-[700px] w-full flex-1 relative z-20 lg:pr-10 pr-0 py-10">
               <div
-                className={`cool md:text-5xl text-3xl w-fit text-alt font-extrabold flex flex-col relative gap-1 text-center lg:text-start ${
-                  lan === "ar" ? " m-auto lg:ml-auto lg:m-0 " : "m-auto lg:m-0"
+                className={`sm:text-3xl text-xl w-fit text-white flex flex-col relative gap-1 text-center lg:text-start ${
+                  lan === "ar" ? "lg:ml-auto lg:m-0 m-auto" : "lg:m-0 m-auto"
                 }`}
               >
                 <motion.span
@@ -292,10 +270,18 @@ function About() {
                     stiffness: 100,
                   },
                 }}
-                className="relative text-sm md:text-base uppercase tracking-wide text-zinc-200 text-center lg:text-start"
+                className="relative sm:text-sm text-xs uppercase tracking-wide text-gray-200 text-center lg:text-start"
               >
                 {ABOUT[lan].trainingInfo}
               </motion.p>
+              <AltButton
+                content={`${lan == "en" ? "register" : "تسجيل"}`}
+                outline=""
+                altColor="text-main"
+                bgColor="bg-main"
+                button_circle_bg_color="bg-black"
+                color="text-black "
+              />
             </div>
           </div>
         </Container>

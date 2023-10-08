@@ -11,36 +11,28 @@ export const Nav = () => {
   const { lan } = GlobalContext();
   const { workId } = useParams();
   return (
-    <nav className="pt-4 z-50">
+    <nav className="py-6 z-50">
       <Container>
         <div className="flex justify-between items-center gap-5">
           <NavLink to={"/"} className="logo flex-1">
-            <img src="/assets/logo.png" alt="" width={120} />
+            <img
+              src="/assets/logo.png"
+              alt=""
+              className="sm:w-[100px] w-[80px]"
+            />
           </NavLink>
           {!workId && (
             <ul className="items-center uppercase gap-6 sm:flex hidden">
-              <NavLink
-                to="/"
-                className="font-bold nav-link hover:text-main transition"
-              >
+              <NavLink to="/" className="nav-link hover:text-main transition">
                 {HOME[lan].title}
               </NavLink>
-              <NavLink
-                to="/"
-                className="font-bold nav-link hover:text-main transition"
-              >
+              <NavLink to="/" className="nav-link hover:text-main transition">
                 {ABOUT[lan].title}
               </NavLink>
-              <NavLink
-                to="/"
-                className="font-bold nav-link hover:text-main transition"
-              >
+              <NavLink to="/" className="nav-link hover:text-main transition">
                 {WORKS[lan].title}
               </NavLink>
-              <NavLink
-                to="/"
-                className="font-bold nav-link hover:text-main transition"
-              >
+              <NavLink to="/" className="nav-link hover:text-main transition">
                 {COMPANIES[lan].title}
               </NavLink>
             </ul>

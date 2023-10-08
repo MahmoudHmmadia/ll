@@ -23,8 +23,7 @@ export function AltButton({
 }: props) {
   return (
     <m.button
-      className={`button p-2 relative font-extrabold w-full tracking-wider uppercase flex justify-center items-center overflow-hidden ${outline} ${bgColor} ${color}`}
-      style={{}}
+      className={`button p-2 relative w-full tracking-wider uppercase flex justify-center items-center overflow-hidden ${outline} ${bgColor} ${color}`}
       initial={{
         y: animate ? "30%" : "",
         opacity: animate ? 0 : "",

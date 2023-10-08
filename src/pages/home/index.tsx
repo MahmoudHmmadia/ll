@@ -9,12 +9,12 @@ function Home() {
   return (
     <div
       className="h-full bg-cover relative min-h-screen pb-24"
-      style={{
-        backgroundImage: "url('assets/landing.png')",
-      }}
+      // style={{
+      //   backgroundImage: "url('assets/landing.png')",
+      // }}
     >
-      <div className="absolute left-0 bg-gradient_main top-0 w-full h-full opacity-80">
-        {/* <img src="assets/landing.png" className="object-contain" alt="" /> */}
+      <div className="absolute -right-32 bg-gradient_main top-0 w-full h-full opacity-50">
+        <img src="assets/landing.png" className="object-contain" alt="" />
       </div>
       <Nav />
       <Container>
@@ -33,7 +33,7 @@ function Home() {
               }}
             ></m.div>
             <m.div
-              className="absolute -left-[11%] top-[12%] opacity-70"
+              className="absolute lg:-left-[11%] lg:top-[12%] md:-left-[33%] md:top-[10%] -left-[30%] top-[10%] opacity-50"
               initial={{
                 opacity: 0,
               }}
@@ -71,7 +71,7 @@ function Home() {
           </div>
           <div className="flex flex-col relative m-auto gap-4 flex-1 items-center">
             <m.h1
-              className="text-main cool uppercase sm:text-6xl text-4xl  font-bold text-center"
+              className="text-white uppercase md:text-5xl sm:text-4xl text-3xl text-center"
               initial={{
                 opacity: 0,
                 y: 20,
@@ -88,8 +88,26 @@ function Home() {
             >
               {HOME[lan].name}
             </m.h1>
+            <m.p
+              className={`sm:text-xl text-lg text-white text-animate tracking-wider uppercase text-center`}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  delay: 2.4,
+                  type: "spring",
+                  stiffness: 70,
+                },
+              }}
+            >
+              {HOME[lan].info}
+            </m.p>
             <m.div
-              className="sm:w-[200px] w-[150px]"
+              className=" w-[150px]"
               initial={{
                 opacity: 0,
                 y: 20,
@@ -107,27 +125,7 @@ function Home() {
               <img src="assets/ptt.png" alt="ptt" />
             </m.div>
             <m.p
-              className={`sm:text-4xl text-2xl text-white text-animate font-extrabold cool tracking-wider uppercase text-center  ${
-                lan === "en" && "stroke"
-              }`}
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 2.4,
-                  type: "spring",
-                  stiffness: 70,
-                },
-              }}
-            >
-              {HOME[lan].info}
-            </m.p>
-            <m.p
-              className="text-zinc-200 tracking-wide sm:text-base text-sm uppercase text-center max-w-[500px]"
+              className="text-gray-200 tracking-wide sm:text-sm text-xs uppercase text-center max-w-[500px]"
               style={{
                 lineHeight: "30px",
               }}
@@ -149,9 +147,9 @@ function Home() {
             </m.p>
             <div className="flex flex-col gap-2 justify-center">
               <m.p
-                className="uppercase text-main text-center sm:text-sm text-xs font-bold tracking-widest"
+                className="uppercase text-white text-center sm:text-sm text-xs tracking-widest"
                 style={{
-                  textShadow: "0 0 2px",
+                  textShadow: "0 0 3px",
                 }}
                 initial={{
                   opacity: 0,
@@ -170,7 +168,7 @@ function Home() {
                 {HOME[lan].inspiration}
               </m.p>
               <m.span
-                className="sm:text-sm text-xs tracking-wide ml-auto uppercase font-bold text-zinc-200"
+                className="sm:text-sm text-xs tracking-wide ml-auto uppercase text-gray-200"
                 initial={{
                   opacity: 0,
                   y: 20,
