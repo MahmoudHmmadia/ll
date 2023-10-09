@@ -1,21 +1,15 @@
 import Container from "../../components/Container";
 import { Nav } from "../../components/Nav";
-import { AltButton } from "../../components/button/index";
+import { AltButton } from "../../components/button/AltButton";
 import { motion as m } from "framer-motion";
 import GlobalContext from "../../context/GlobalContext";
 import { HOME } from "../../constants/data";
+import SectionBg from "../../components/SectionBg";
 function Home() {
   const { lan } = GlobalContext();
   return (
-    <div
-      className="h-full bg-cover relative min-h-screen pb-24"
-      // style={{
-      //   backgroundImage: "url('assets/landing.png')",
-      // }}
-    >
-      <div className="absolute -right-32 bg-gradient_main top-0 w-full h-full opacity-50">
-        <img src="assets/landing.png" className="object-contain" alt="" />
-      </div>
+    <div className="bg-cover relative min-h-screen pb-24">
+      <SectionBg src="assets/11.jpg" opacity="opacity-40" />
       <Nav />
       <Container>
         <div className="flex items-center gap-2 lg:flex-row flex-col">
@@ -33,7 +27,7 @@ function Home() {
               }}
             ></m.div>
             <m.div
-              className="absolute lg:-left-[11%] lg:top-[12%] md:-left-[33%] md:top-[10%] -left-[30%] top-[10%] opacity-50"
+              className="absolute lg:-left-[11%] lg:top-[12%] md:-left-[33%] md:top-[10%] -left-[30%] top-[10%]"
               initial={{
                 opacity: 0,
               }}
@@ -45,7 +39,7 @@ function Home() {
               }}
             >
               <img
-                src="assets/pt.png"
+                src="assets/aa.png"
                 className="object-contain"
                 width={300}
                 alt=""
@@ -70,60 +64,62 @@ function Home() {
             />
           </div>
           <div className="flex flex-col relative m-auto gap-4 flex-1 items-center">
-            <m.h1
-              className="text-white uppercase md:text-5xl sm:text-4xl text-3xl text-center"
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 2,
-                  type: "spring",
-                  stiffness: 70,
-                },
-              }}
-            >
-              {HOME[lan].name}
-            </m.h1>
-            <m.p
-              className={`sm:text-xl text-lg text-white text-animate tracking-wider uppercase text-center`}
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 2.4,
-                  type: "spring",
-                  stiffness: 70,
-                },
-              }}
-            >
-              {HOME[lan].info}
-            </m.p>
-            <m.div
-              className=" w-[150px]"
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 2.2,
-                  type: "spring",
-                  stiffness: 70,
-                },
-              }}
-            >
-              <img src="assets/ptt.png" alt="ptt" />
-            </m.div>
+            <div className="flex flex-col gap-2 items-center">
+              <m.h1
+                className="text-white uppercase md:text-4xl sm:text-3xl text-2xl text-center"
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 2,
+                    type: "spring",
+                    stiffness: 70,
+                  },
+                }}
+              >
+                {HOME[lan].name}
+              </m.h1>
+              <m.p
+                className={`sm:text-xl text-lg text-white text-animate tracking-wider uppercase text-center`}
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 2.4,
+                    type: "spring",
+                    stiffness: 70,
+                  },
+                }}
+              >
+                {HOME[lan].info}
+              </m.p>
+              <m.div
+                className=" w-[150px]"
+                initial={{
+                  opacity: 0,
+                  y: 20,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    delay: 2.2,
+                    type: "spring",
+                    stiffness: 70,
+                  },
+                }}
+              >
+                <img src="assets/ptt.png" alt="ptt" />
+              </m.div>
+            </div>
             <m.p
               className="text-gray-200 tracking-wide sm:text-sm text-xs uppercase text-center max-w-[500px]"
               style={{

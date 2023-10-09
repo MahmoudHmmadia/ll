@@ -1,8 +1,14 @@
 import { Navigate, useParams } from "react-router-dom";
 import { useData } from "../../constants/data";
-import { motion as m } from "framer-motion";
 import { Nav } from "../../components/Nav";
-import SectionTitle from "../../components/SectionTitle";
+import PageTransition from "../../components/PageTransition";
+import Container from "../../components/Container";
+import WorkTitle from "./components/WorkTitle";
+import Shape from "../../components/Shape";
+import MyText from "../../components/MyText";
+import SectionBg from "../../components/SectionBg";
+import CoolImage from "../../components/CoolImage";
+import WorkCountryModel from "./components/WorkCountryModel";
 function Work() {
   const { workId } = useParams();
   const { works } = useData();
@@ -13,38 +19,33 @@ function Work() {
     (work) => work.id === workId
   )[0];
   return (
-    <m.div
-      initial={{
-        opacity: 0,
-        y: -20,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: {
-          stiffness: 50,
-          type: "spring",
-          delay: 0.5,
-        },
-      }}
-      exit={{
-        opacity: 0,
-        y: -20,
-      }}
-      className="flex flex-col gap-4 relative overflow-hidden bg-cover min-h-screen"
-      style={{
-        backgroundImage: "url('assets/bg1.jpg')",
-      }}
-    >
-      <div className="absolute bg-gradient_main opacity-80 w-full h-full min-h-screen left-0 top-0"></div>
-      <Nav />
-      <div className="relative flex flex-col gap-6">
-        <SectionTitle title={title} />
-        <p className="text-zinc-200 uppercase tracking-wide text-center">
-          {info}
-        </p>
+    <PageTransition>
+      <div className="flex flex-col pb-10 relative overflow-hidden bg-cover min-h-screen">
+        <SectionBg src="assets/66.jpg" />
+        <Nav />
+        <div className="relative">
+          <div className="absolute left-2 md:top-10 top-40">
+            <Shape />
+          </div>
+          <div className="absolute left-2 md:top-32 uppercase opacity-20 top-80">
+            <WorkCountryModel country={country} />
+          </div>
+          <Container>
+            <div className="relative flex flex-col gap-6 z-10">
+              <WorkTitle title={title} />
+              <div className="lg:w-8/12 m-auto">
+                <MyText content={info} delay={0.4} center med />
+              </div>
+              <div className="flex gap-10 justify-center items-center flex-col md:flex-row">
+                <CoolImage src={imgSrc1} width="md:w-[400px] w-[300px]" />
+                <Shape />
+                <CoolImage src={imgSrc2} width="md:w-[400px] w-[300px]" />
+              </div>
+            </div>
+          </Container>
+        </div>
       </div>
-    </m.div>
+    </PageTransition>
   );
 }
 

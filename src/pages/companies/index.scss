@@ -1,0 +1,58 @@
+#imageI {
+  --i: 0;
+}
+#imageII {
+  --i: 1;
+}
+#imageIII {
+  --i: 2;
+}
+#imageVI {
+  --i: 3;
+}
+
+.companies {
+  .container {
+    .all {
+      .companies {
+        left: -50%;
+        .image {
+          transform: rotate(calc(360deg / 4 * var(--i)));
+          transform-origin: 345px;
+          img {
+            transform: rotate(calc(-360deg / 4 * var(--i)));
+            // filter: grayscale(100%);
+          }
+          // &.active {
+          //   box-shadow: 0 0 0 6px #161718, 0 0 0 12px $khaled-main;
+          //   @media (max-width: 767px) {
+          //     box-shadow: 0 0 0 3px #161718, 0 0 0 6px $khaled-main;
+          //   }
+          //   img {
+          //     filter: grayscale(0);
+          //   }
+          // }
+        }
+      }
+      // .person_details {
+      //   @media (max-width: 767px) {
+      //     .image {
+      //       img {
+      //         width: 60px !important;
+      //         height: 60px !important;
+      //       }
+      //     }
+      //     .details {
+      //       font-size: 0.6rem;
+      //     }
+      //     .name {
+      //       font-size: 0.7rem;
+      //     }
+      //     .social {
+      //       font-size: 0.6rem;
+      //     }
+      //   }
+      // }
+    }
+  }
+}
