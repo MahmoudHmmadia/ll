@@ -52,8 +52,39 @@ export function useData() {
       imgSrc2: "/assets/works/eclectic_d_2.jpeg",
     },
   ];
+  const companies = [
+    {
+      name: COMPANIES[lan].company1.name,
+      time: COMPANIES[lan].company1.time,
+      address: COMPANIES[lan].company1.address,
+      image: COMPANIES[lan].company1.image,
+      phone: COMPANIES[lan].company1.phone,
+    },
+    {
+      name: COMPANIES[lan].company2.name,
+      image: COMPANIES[lan].company2.image,
+      time: COMPANIES[lan].company2.time,
+      address: COMPANIES[lan].company1.address,
+      phone: COMPANIES[lan].company2.phone,
+    },
+    {
+      image: COMPANIES[lan].company3.image,
+      name: COMPANIES[lan].company3.name,
+      time: COMPANIES[lan].company3.time,
+      address: COMPANIES[lan].company1.address,
+      phone: COMPANIES[lan].company3.phone,
+    },
+    {
+      name: COMPANIES[lan].company4.name,
+      time: COMPANIES[lan].company4.time,
+      address: COMPANIES[lan].company1.address,
+      image: COMPANIES[lan].company4.image,
+      phone: COMPANIES[lan].company4.phone,
+    },
+  ];
   return {
     works,
+    companies,
   };
 }
 export const HOME = {
@@ -224,8 +255,64 @@ export const CONTACT = {
 export const COMPANIES = {
   en: {
     title: "companies",
+    company1: {
+      name: "AB Group",
+      time: "Working hours - 10:00 AM To 05:00 PM",
+      address: "Znatah tripoli - libya",
+      image: "assets/logo2.png",
+      phone: "0918244414",
+    },
+    company2: {
+      name: "AB disign boutique",
+      time: "Working hours - 10:00 AM To 05:00 PM",
+      address: "Znatah tripoli - libya",
+      image: "assets/2.png",
+      phone: "0918244414",
+    },
+    company3: {
+      name: "das holz",
+      time: "Working hours - 10:00 AM To 09:00 PM exept friday",
+      address: "Znatah tripoli - libya",
+      image: "assets/1.png",
+      phone: "0915170505 - 0918170505",
+    },
+    company4: {
+      name: "ZAN furniture and decoration",
+      time: "Working hours - 10:00 AM To 07:00 PM exept friday",
+      address: "al biefi - tajoura tripoli - libya",
+      image: "assets/3.png",
+      phone: "0910204141 - 0910604141",
+    },
   },
   ar: {
     title: "الشركات",
+    company1: {
+      name: "مجموعة AB",
+      time: "أوقات العمل 10:00 AM To 05:00 PM",
+      address: "Znatah tripoli - libya",
+      image: "assets/logo2.png",
+      phone: "0918244414",
+    },
+    company2: {
+      name: "AB disign boutique",
+      time: "أوقات العمل 10:00 AM To 05:00 PM",
+      address: "Znatah tripoli - libya",
+      image: "assets/2.png",
+      phone: "0918244414",
+    },
+    company3: {
+      name: "das holz",
+      time: "أوقات العمل 10:00 AM To 09:00 PM",
+      address: "Znatah tripoli - libya",
+      image: "assets/1.png",
+      phone: "0915170505 - 0918170505",
+    },
+    company4: {
+      name: "ZAN furniture and decoration",
+      time: "أوقات العمل 10:00 AM To 07:00 PM",
+      address: "al biefi - tajoura tripoli - libya",
+      image: "assets/3.png",
+      phone: "0910204141 - 0910604141",
+    },
   },
 };
