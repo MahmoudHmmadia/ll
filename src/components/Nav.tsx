@@ -25,8 +25,8 @@ export const Nav = () => {
           </NavLink>
           {!workId && (
             <ul
-              className={`"uppercase sm:gap-6 flex sm:text-base text-2xl uppercase sm:relative absolute left-0 sm:w-auto w-full sm:h-auto h-screen sm:bg-transparent transition-all sm:transition-none duration-500 bg-black bg-opacity-90 sm:flex-row flex-col z-30 justify-center gap-10 sm:justify-start sm:items-start items-center ${
-                !open ? "-top-[1000%]" : "-top-6"
+              className={`"uppercase sm:gap-6 flex sm:text-base text-lg uppercase sm:relative absolute left-0 sm:w-auto w-full sm:h-auto h-screen sm:bg-transparent transition-all sm:transition-none duration-500 bg-black bg-opacity-90 sm:flex-row flex-col z-30 justify-center gap-10 sm:justify-start sm:items-start items-center ${
+                !open ? "-top-[1100%]" : "-top-6"
               } `}
             >
               <img

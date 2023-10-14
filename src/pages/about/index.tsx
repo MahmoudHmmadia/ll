@@ -10,11 +10,15 @@ import { AltButton } from "../../components/button/AltButton";
 import CoolImage from "../../components/CoolImage";
 import SectionBg from "../../components/SectionBg";
 import MyText from "../../components/MyText";
+import { useState } from "react";
+import RegisterModel from "./components/RegisterModel";
 
 function About() {
   const { lan } = GlobalContext();
+  const [showenModel, setShowenModel] = useState(false);
   return (
     <div className="overflow-hidden about bg-gradient_main" id="about">
+      {showenModel && <RegisterModel fn={setShowenModel} />}
       <div className="relative overflow-hidden pt-24 ">
         <SectionBg src="assets/22.jpg" opacity="opacity-100" />
         <div className="absolute w-full h-full top-0 left-0 bg-gradient_main opacity-60 z-10"></div>
@@ -67,7 +71,7 @@ function About() {
                 </div>
                 <MyText content={ABOUT[lan].info} delay={1} />
               </div>
-              <div className="logo_container p-10 bg-alt rounded-full relative aspect-square w-[300px] h-[300px] flex justify-center items-center z-10">
+              <div className="logo_container p-10 bg-alt bg-opacity-50 rounded-full relative aspect-square w-[300px] h-[300px] flex justify-center items-center z-10">
                 <motion.img
                   src="assets/logo.png"
                   alt=""
@@ -172,7 +176,8 @@ function About() {
                 altColor="text-main"
                 bgColor="bg-main"
                 button_circle_bg_color="bg-black"
-                color="text-black "
+                color="text-black"
+                clickFunction={() => setShowenModel(true)}
               />
             </div>
           </div>

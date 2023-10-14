@@ -32,7 +32,8 @@ html,
   h2,
   h3,
   h4,
-  span {
+  span,
+  input {
     direction: rtl;
   }
 }
@@ -110,6 +111,12 @@ html,
     font-size: 22px;
     font-weight: bold;
     color: #fff;
+  }
+}
+.companies-boxes {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
 @keyframes shine {

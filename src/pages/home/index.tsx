@@ -5,7 +5,9 @@ import { motion as m } from "framer-motion";
 import GlobalContext from "../../context/GlobalContext";
 import { HOME } from "../../constants/data";
 import SectionBg from "../../components/SectionBg";
+import { useNavigate } from "react-router-dom";
 function Home() {
+  const router = useNavigate();
   const { lan } = GlobalContext();
   return (
     <div className="bg-cover relative min-h-screen pb-24">

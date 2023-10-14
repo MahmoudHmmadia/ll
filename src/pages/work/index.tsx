@@ -9,7 +9,13 @@ import MyText from "../../components/MyText";
 import SectionBg from "../../components/SectionBg";
 import CoolImage from "../../components/CoolImage";
 import WorkCountryModel from "./components/WorkCountryModel";
+import { useEffect } from "react";
 function Work() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({ top: 0 });
+    }, 500);
+  }, []);
   const { workId } = useParams();
   const { works } = useData();
   if (works.filter((work) => work.id === workId).length === 0) {

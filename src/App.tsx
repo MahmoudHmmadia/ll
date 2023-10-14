@@ -9,6 +9,7 @@ import GlobalContext from "./context/GlobalContext";
 import PageTransition from "./components/PageTransition";
 import Contact from "./pages/contact";
 import Companies from "./pages/companies";
+import Footer from "./components/Footer";
 export const App = () => {
   const { lan } = GlobalContext();
   const location = useLocation();
@@ -29,7 +30,8 @@ export const App = () => {
                   <About />
                   <Works />
                   <Companies />
-                  <Contact />
+                  {/* <Contact /> */}
+                  <Footer />
                 </main>
               </PageTransition>
             }

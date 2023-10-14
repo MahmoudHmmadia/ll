@@ -7,7 +7,7 @@ function SectionBg({
 }) {
   return (
     <div
-      className={`absolute left-0 top-0 w-full h-full bg-cover ${opacity}`}
+      className={`absolute left-0 top-0 w-full h-full bg-cover bg-right ${opacity}`}
       style={{
         backgroundImage: `url(${src})`,
       }}
