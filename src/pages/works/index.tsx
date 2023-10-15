@@ -21,9 +21,22 @@ function Works() {
         <img src="assets/aaa.png" alt="" className="object-cover" />
       </div>
       <Container>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 items-center">
           <SectionTitle title={WORKS[lan].title} />
           <MyText content={WORKS[lan].info} delay={0.2} med center />
+          <ul className="flex items-center flex-wrap justify-center">
+            {WORKS[lan].nav.map((li) => (
+              <li
+                className={`uppercase p-4 bg-black bg-opacity-60 text-xs  sm:text-sm cursor-pointer hover:bg-main hover:text-black transition-all ${
+                  (li === "all" || li === "الكل") &&
+                  "bg-main bg-opacity-100 text-black"
+                }`}
+                key={li}
+              >
+                {li}
+              </li>
+            ))}
+          </ul>
           <Swiper
             grabCursor={true}
             centeredSlides={true}

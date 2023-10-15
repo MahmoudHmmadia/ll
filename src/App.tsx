@@ -10,6 +10,7 @@ import PageTransition from "./components/PageTransition";
 import Contact from "./pages/contact";
 import Companies from "./pages/companies";
 import Footer from "./components/Footer";
+import Training from "./pages/trainning";
 export const App = () => {
   const { lan } = GlobalContext();
   const location = useLocation();
@@ -27,10 +28,10 @@ export const App = () => {
               <PageTransition>
                 <main className="flex flex-col">
                   <Home />
-                  <About />
                   <Works />
+                  <Training />
+                  <About />
                   <Companies />
-                  {/* <Contact /> */}
                   <Footer />
                 </main>
               </PageTransition>

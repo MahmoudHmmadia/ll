@@ -17,7 +17,7 @@ function Home() {
         <div className="flex items-center gap-2 lg:flex-row flex-col">
           <div className="relative lg:pl-20 pl-0">
             <m.div
-              className="absolute lg:left-[60%] left-1/2 z-10 bottom-0 -translate-x-1/2 rounded-full sm:w-[340px] sm:h-[340px] bg-alt w-[250px] h-[250px]"
+              className="absolute opacity-50 lg:left-[60%] left-1/2 z-10 bottom-0 -translate-x-1/2 rounded-full sm:w-[340px] sm:h-[340px] bg-alt w-[250px] h-[250px]"
               initial={{
                 backgroundColor: "#e1cc7b",
               }}

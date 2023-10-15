@@ -214,6 +214,12 @@ export const WORKS = {
       country: "Libya",
     },
     btn: "reed more",
+    nav: [
+      "all",
+      "interior design",
+      "Architectural design",
+      "Design and implementation",
+    ],
   },
   ar: {
     title: "الأعمال",
@@ -261,6 +267,7 @@ export const WORKS = {
       country: "ليبيا",
     },
     btn: "قرائة المزيد",
+    nav: ["الكل", "تصميم داخلي", "تصميم معماري", "تصميم وتنفيذ"],
   },
 };
 export const CONTACT = {
