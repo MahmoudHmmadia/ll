@@ -27,8 +27,8 @@ function About() {
         <Container>
           <div className="flex flex-col gap-8">
             <SectionTitle title={ABOUT[lan].title} />
-            <div className="flex justify-center items-center gap-8 lg:gap-10 mb-60 lg:flex-row flex-col ">
-              <div className="flex flex-col gap-6 lg:max-w-[700px] w-full flex-1 relative z-20 lg:pr-10 lg:py-10 order-1 lg:-order-1">
+            <div className="flex justify-center items-center gap-8 lg:gap-10 mb-32 lg:flex-row flex-col ">
+              <div className="flex flex-col gap-6 lg:max-w-[700px] w-full flex-1 relative z-20 order-1 lg:-order-1">
                 <div
                   className={`sm:text-3xl text-xl w-fit text-white flex flex-col relative gap-1 text-center lg:text-start ${
                     lan === "ar" ? "lg:ml-auto lg:m-0 m-auto" : "lg:m-0 m-auto"
@@ -74,7 +74,7 @@ function About() {
                 <motion.img
                   src="assets/logo.png"
                   alt=""
-                  width={400}
+                  className="sm:w-[400px] w-[200px]"
                   whileInView={{
                     x: [200, 0],
                     opacity: [0, 1],

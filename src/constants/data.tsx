@@ -368,3 +368,34 @@ export const social = [
   { icon: SiInstagram, color: "#F77737" },
   { icon: SiTiktok, color: "#ff0050" },
 ];
+
+export const ABDALHAMED = {
+  en: [
+    {
+      title: "Who Is ABD ALHAMED ALBAHBAH",
+      info: "Abdulhamid Albahbah, born in 1993 in Derna - Libya, is an interior designer, founder, and General Director of AB Group. He obtained many academic certificates in several fields, the most important of which are interior design, architecture, and human development certificates from the United Nations Institute. Project management and marketing from the Canadian Institute of Dr. Ibrahim Alfaqeeh. He obtained an MBA Business Administration Diploma from the American Institute. Obtained many Certificates of Appreciation in the field of interior design and architecture. Participated in many local and international exhibitions in several different countries such as Italy, Netherlands, and Turkey.",
+    },
+    {
+      title: "His main objective",
+      info: "promote the interior design and architecture industry and to raise public taste. His goals emerge from his understanding of the importance of the field of interior design and architecture, and to shed more light on it in the Middle East by spreading this culture to enable those interested in these fields to upgrade themselves and gain trust to reach their ambitions.To prove that the countries of the Middle East have talents and sparkling minds capable of succeeding and excelling globally.AB Group's vision is to spread this culture by helping students and trainees through training courses and workshops.",
+    },
+    {
+      title: "Content Maker",
+      info: "Through the work of designer / Abdulhamid Al-Bahbah and his interest in presenting and explaining his works and ideas on social media, he has become one of the most important content makers worldwide. He recently won an honoring award from the Arab Content Makers Forum in2022. His method was characterized by the preparation of videos in which he introduces and explains targeted and innovative ideas in his field that can be implemented simply, in addition to shedding light on the flaws that must be avoided and giving appropriate solutions.",
+    },
+  ],
+  ar: [
+    {
+      title: "من هو عبد الحميد بحباح",
+      info: "عبد الحميد البباحة من مواليد 1993 بمدينة درنة - ليبيا، مصمم ديكور داخلي، المؤسس والمدير العام لمجموعة AB. حصل على العديد من الشهادات الأكاديمية في عدة مجالات أهمها وهي شهادات التصميم الداخلي والهندسة المعمارية والتنمية البشرية من معهد الأمم المتحدة. إدارة وتسويق المشاريع من المعهد الكندي للدكتور ابراهيم الفقيه. حصل على دبلومة إدارة الأعمال MBA من المعهد الأمريكي. حصل على العديد من شهادات التقدير في مجال التصميم الداخلي و بنيان. شارك في العديد من المعارض المحلية والدولية في عدة معارض مختلفة دول مثل إيطاليا وهولندا وتركيا.",
+    },
+    {
+      title: "صانع محتوى",
+      info: "من خلال أعمال المصمم عبدالحميد البحبح واهتمامه بعرض أعماله وشرحها والأفكارعلى وسائل التواصل الاجتماعي، أصبح واحدا من أهم صانعي المحتوى على مستوى العالم. هو مؤخرا حصل على جائزة تكريمية من صناع المحتوى العرب المنتدى في 2022.   يقوم بإعداد فيديوهات حيث يتم  فيها التعريف والشرح للأفكار المستهدفة والمبتكرة في مجاله التي يمكن أن يمكن تنفيذها ببساطة، بالإضافة إلى تسليط الضوء على العيوب التي يجب تجنبها وإعطاء الحلول المناسبة وهي شهادات التصميم الداخلي والهندسة المعمارية والتنمية البشرية من معهد الأمم المتحدة. إدارة وتسويق المشاريع من المعهد الكندي للدكتور ابراهيم الفقيه. حصل على دبلومة إدارة الأعمال MBA من المعهد الأمريكي. حصل على العديد من شهادات التقدير في مجال التصميم الداخلي و بنيان.شارك في العديد من المعارض المحلية والدولية في عدة معارض مختلفة دول مثل إيطاليا وهولندا وتركيا.",
+    },
+    {
+      title: "هدفه الرئيسي",
+      info: "تعزيز التصميم الداخلي وصناعة الهندسة المعمارية ولرفع الذوق العام . أهدافه تنبع من فهمه لل أهمية مجال التصميم الداخلي والهندسة المعمارية، و تسليط الضوء عليها في الشرق الأوسط من خلال نشرهذه الثقافة لتمكين المهتمين في هذه المجالات للارتقاء بأنفسهم وكسب الثقة للوصول إلى طموحاتهم. أن نثبت أن دول الشرق الأوسط تتمتع بالمواهب والعقول اللامعة قادرة على النجاح والتفوق عالميا. وتتمثل رؤية مجموعة AB في نشر هذه الثقافة من خلال مساعدة الطلاب والمتدربين من خلال الدورات التدريبية وورش العمل",
+    },
+  ],
+};

@@ -15,7 +15,7 @@ function Companies() {
         <SectionTitle title={COMPANIES[lan].title} />
         <div className="grid gap-5 mt-20 companies-boxes">
           {companies.map((company) => (
-            <Company company={company} />
+            <Company company={company} key={company.name} />
           ))}
         </div>
       </Container>

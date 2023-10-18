@@ -11,9 +11,13 @@ import GlobalContext from "../../context/GlobalContext";
 import CoolImage from "../../components/CoolImage";
 import SectionBg from "../../components/SectionBg";
 import MyText from "../../components/MyText";
+import WorkNav from "./components/WorkNav";
+import { AiTwotoneAppstore } from "react-icons/ai";
+import { useState } from "react";
 function Works() {
   const { works } = useData();
   const { lan } = GlobalContext();
+  const [isShowen, setIsShowen] = useState(false);
   return (
     <div className="py-20 relative works" id="works">
       <SectionBg src="assets/44.jpg" opacity="opacity-30" />
@@ -24,19 +28,17 @@ function Works() {
         <div className="flex flex-col gap-8 items-center">
           <SectionTitle title={WORKS[lan].title} />
           <MyText content={WORKS[lan].info} delay={0.2} med center />
-          <ul className="flex items-center flex-wrap justify-center">
-            {WORKS[lan].nav.map((li) => (
-              <li
-                className={`uppercase p-4 bg-black bg-opacity-60 text-xs  sm:text-sm cursor-pointer hover:bg-main hover:text-black transition-all ${
-                  (li === "all" || li === "الكل") &&
-                  "bg-main bg-opacity-100 text-black"
-                }`}
-                key={li}
-              >
-                {li}
-              </li>
-            ))}
-          </ul>
+          <div className="relative w-full flex justify-center">
+            <div
+              className="absolute lg:hidden flex text-main text-3xl left-0 cursor-pointer"
+              onClick={() => {
+                setIsShowen(!isShowen);
+              }}
+            >
+              <AiTwotoneAppstore />
+            </div>
+            <WorkNav isShowen={isShowen} setIsShowen={setIsShowen} />
+          </div>
           <Swiper
             grabCursor={true}
             centeredSlides={true}

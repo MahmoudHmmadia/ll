@@ -5,14 +5,16 @@ import { motion as m } from "framer-motion";
 import GlobalContext from "../../context/GlobalContext";
 import { HOME } from "../../constants/data";
 import SectionBg from "../../components/SectionBg";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import MoreModule from "./components/MoreModule";
 function Home() {
-  const router = useNavigate();
   const { lan } = GlobalContext();
+  const [isShowenMoreModule, setIsShowenMoreModule] = useState(false);
   return (
     <div className="bg-cover relative min-h-screen pb-24">
       <SectionBg src="assets/11.jpg" opacity="opacity-40" />
       <Nav />
+      {isShowenMoreModule && <MoreModule toggle={setIsShowenMoreModule} />}
       <Container>
         <div className="flex items-center gap-2 lg:flex-row flex-col">
           <div className="relative lg:pl-20 pl-0">
@@ -207,6 +209,8 @@ function Home() {
                 button_circle_bg_color="bg-black"
                 outline=""
                 bgColor="bg-main"
+                link
+                linkRef="#companies"
               />
               <AltButton
                 content={HOME[lan].aboutBtn}
@@ -215,6 +219,7 @@ function Home() {
                 outline=""
                 button_circle_bg_color="bg-main"
                 bgColor="bg-black"
+                clickFunction={() => setIsShowenMoreModule(true)}
               />
             </m.div>
           </div>

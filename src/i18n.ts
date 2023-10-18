@@ -30,7 +30,6 @@ i18n.use(initReactI18next).init({
         },
         about: {
           title: "About ABD ALHAMED",
-
           titleI: "Who Is ABD ALHAMED ALBAHBAH",
           infoI:
             "Abdulhamid Albahbah, born in 1993 in Derna - Libya, is an interior designer, founder, and General Director of AB Group. He obtained many academic certificates in several fields, the most important of which are interior design, architecture, and human development certificates from the United Nations Institute. Project management and marketing from the Canadian Institute of Dr. Ibrahim Alfaqeeh. He obtained an MBA Business Administration Diploma from the American Institute. Obtained many Certificates of Appreciation in the field of interior design and architecture. Participated in many local and international exhibitions in several different countries such as Italy, Netherlands, and Turkey.",

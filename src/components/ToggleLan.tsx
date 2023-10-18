@@ -7,7 +7,7 @@ function ToggleLan() {
 
   return (
     <div
-      className="flex text-2xl items-center cursor-pointer gap-2 text-alt sm:order-1 -order-2"
+      className="flex text-2xl items-center cursor-pointer gap-2 text-main sm:order-1 -order-2"
       onClick={() => {
         setLan((prev) => {
           if (prev === "ar") return "en";

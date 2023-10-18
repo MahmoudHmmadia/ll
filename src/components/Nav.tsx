@@ -2,7 +2,7 @@ import { NavLink, useParams } from "react-router-dom";
 import Container from "./Container";
 import { Sling as Hamburger } from "hamburger-react";
 import GlobalContext from "../context/GlobalContext";
-import { ABOUT, COMPANIES, CONTACT, HOME, WORKS } from "../constants/data";
+import { ABOUT, COMPANIES, CONTACT, WORKS } from "../constants/data";
 import ToggleLan from "./ToggleLan";
 import { useState } from "react";
 export const Nav = () => {
@@ -65,7 +65,6 @@ export const Nav = () => {
               </a>
             </ul>
           )}
-
           <div className="flex items-center gap-5 z-30">
             <div className="relative   -order-1">
               <span className="opacity-0"> a</span>

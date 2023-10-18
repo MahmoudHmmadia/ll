@@ -119,6 +119,16 @@ html,
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 }
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #cca756;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #cca756;
+  &::after {
+    font-size: 20px;
+  }
+}
 @keyframes shine {
   0% {
     color: #ffff;

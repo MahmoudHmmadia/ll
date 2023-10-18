@@ -9,9 +9,9 @@ function RegisterModel({ fn }: { fn: Dispatch<SetStateAction<boolean>> }) {
   return (
     <>
       <div className="fixed w-screen h-screen bg-black opacity-70 z-50 left-0 top-0"></div>
-      <div className="fixed lg:w-5/12 md:w-8/12 w-full top-1/3 left-1/2 z-50 -translate-x-1/2 p-4 flex flex-col gap-4 bg-black bg-opacity-80 rounded-md">
+      <div className="fixed lg:w-5/12 md:w-8/12 w-full top-1/3 left-1/2 z-50 -translate-x-1/2 p-10 flex flex-col gap-4 bg-black bg-opacity-80 rounded-md">
         <div
-          className="absolute top-2 right-2 text-red-600 text-xl cursor-pointer transition-all hover:scale-95"
+          className="absolute top-2 right-2 text-red-600 text-2xl cursor-pointer transition-all hover:scale-95"
           onClick={() => fn(false)}
         >
           <IoCloseCircle />

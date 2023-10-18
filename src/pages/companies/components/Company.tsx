@@ -23,7 +23,7 @@ function Company({ company }: { company: company }) {
   const { lan } = GlobalContext();
   return (
     <div
-      key={company.name}
+      key={company.address}
       className={`flex flex-col p-4 uppercase bg-[#a5a4a4] bg-opacity-10 relative ${
         company.cover === "assets/company1-cover.jpg" && "lg:-translate-y-10"
       }`}
@@ -57,7 +57,7 @@ function Company({ company }: { company: company }) {
         />
       </div>
       <div className="flex gap-2 flex-1 flex-col justify-end relative">
-        <p className={`flex items-center flex-col gap-2 flex-wrap`}>
+        <div className={`flex items-center flex-col gap-2 flex-wrap`}>
           <div
             className={`sm:text-lg text-base w-fit text-white flex flex-col relative text-center lg:text-start ${
               lan === "ar" ? "ml-auto" : "mr-auto"
@@ -77,8 +77,8 @@ function Company({ company }: { company: company }) {
               {company.name}
             </p>
           </div>
-        </p>
-        <p className={`flex items-center flex-col gap-2 flex-wrap`}>
+        </div>
+        <div className={`flex items-center flex-col gap-2 flex-wrap`}>
           <div
             className={`sm:text-lg text-base w-fit text-white flex flex-col relative text-center lg:text-start ${
               lan === "ar" ? "ml-auto" : "mr-auto"
@@ -98,8 +98,8 @@ function Company({ company }: { company: company }) {
               {company.address}
             </p>
           </div>
-        </p>
-        <p className={`flex items-center flex-col gap-2 flex-wrap`}>
+        </div>
+        <div className={`flex items-center flex-col gap-2 flex-wrap`}>
           <div
             className={`sm:text-lg text-base w-fit text-white flex flex-col relative text-center lg:text-start ${
               lan === "ar" ? "ml-auto" : "mr-auto"
@@ -119,8 +119,8 @@ function Company({ company }: { company: company }) {
               {company.time}
             </p>
           </div>
-        </p>
-        <p className={`flex items-center flex-col gap-2 flex-wrap`}>
+        </div>
+        <div className={`flex items-center flex-col gap-2 flex-wrap`}>
           <div
             className={`sm:text-lg text-base w-fit text-white flex flex-col relative text-center lg:text-start ${
               lan === "ar" ? "ml-auto" : "mr-auto"
@@ -140,7 +140,7 @@ function Company({ company }: { company: company }) {
               {company.phone}
             </p>
           </div>
-        </p>
+        </div>
       </div>
       <div className="w-full h-[1px] mt-4 bg-gray-400"></div>
       <div className="relative mt-4 flex gap-2 justify-center text-sm flex-wrap">
