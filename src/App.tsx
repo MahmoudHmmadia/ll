@@ -18,9 +18,8 @@ export const App = () => {
   const location = useLocation();
   useEffect(() => {
     const myPeer = new Peer({
-      host: "185.77.96.221",
-      secure: false,
-      port: 5000,
+      host: "meet-joybox.com",
+      secure: true,
       debug: 3,
       config: {
         iceServers: [
