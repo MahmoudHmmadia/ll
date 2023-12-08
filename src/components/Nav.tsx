@@ -7,8 +7,11 @@ import ToggleLan from "./ToggleLan";
 import { useState } from "react";
 export const Nav = () => {
   const { lan } = GlobalContext();
+
   const { workId } = useParams();
+
   const [open, setOpen] = useState(false);
+
   return (
     <nav className="py-6 z-50">
       <Container>
@@ -23,14 +26,14 @@ export const Nav = () => {
           {!workId && (
             <ul
               className={`"uppercase sm:gap-6 flex sm:text-base text-lg uppercase sm:relative fixed left-0 sm:w-auto w-full sm:h-auto h-screen sm:bg-transparent transition-all sm:transition-none duration-500 bg-black bg-opacity-90 sm:flex-row flex-col z-30 justify-center gap-10 sm:justify-start sm:items-start items-center ${
-                !open ? "-top-full" : "top-0"
+                !open ? "-top-[130%]" : "top-0"
               } `}
             >
               <img
                 src="assets/logo.png"
                 width={150}
                 className="sm:hidden flex"
-                alt=""
+                alt="Logo"
               />
               <a
                 href="#about"

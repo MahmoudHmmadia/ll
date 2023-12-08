@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Works from "./pages/works";
@@ -10,8 +10,10 @@ import Companies from "./pages/companies";
 import Footer from "./components/Footer";
 import { Helmet } from "react-helmet";
 import Training from "./pages/training";
+
 export const App = () => {
   const { lan } = GlobalContext();
+
   const location = useLocation();
 
   return (
@@ -42,6 +44,7 @@ export const App = () => {
               }
             />
             <Route path="/:workId" element={<Work />} />
+            <Route path="/*" element={<Navigate to={"/"} />} />
           </Routes>
         </AnimatePresence>
       </div>
