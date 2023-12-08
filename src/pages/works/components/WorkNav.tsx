@@ -10,8 +10,8 @@ function WorkNav({ isShowen, setIsShowen }: props) {
   const [workState, setWorkState] = useState("all");
   return (
     <ul
-      className={`lg:grid items-center bg-black w-max gap-10 transition-all flex flex-col bg-opacity-90 p-2 rounded-lg lg:relative absolute z-40 lg:left-0 left-10 lg:gap-1 ${
-        isShowen ? "opacity-100 z-10" : "opacity-0 -z-10 lg:opacity-100"
+      className={`lg:grid items-center bg-black w-max gap-10 transition-all flex flex-col bg-opacity-90 p-2 rounded-lg lg:relative absolute lg:left-0 left-10 lg:gap-1 ${
+        isShowen ? "opacity-100 z-10" : "opacity-0 -z-40 lg:opacity-100"
       }`}
       style={{
         gridTemplateColumns: "1fr 1fr 1fr 1fr",

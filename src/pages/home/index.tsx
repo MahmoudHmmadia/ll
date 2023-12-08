@@ -7,6 +7,7 @@ import { HOME } from "../../constants/data";
 import SectionBg from "../../components/SectionBg";
 import { useState } from "react";
 import MoreModule from "./components/MoreModule";
+import ImageRenderer from "../../components/Image";
 function Home() {
   const { lan } = GlobalContext();
   const [isShowenMoreModule, setIsShowenMoreModule] = useState(false);
@@ -42,14 +43,14 @@ function Home() {
                 },
               }}
             >
-              <img
-                src="assets/aa.png"
-                className="object-contain"
+              <ImageRenderer
+                url="assets/aa.png"
                 width={300}
-                alt=""
+                height={"auto"}
+                thumb=""
               />
             </m.div>
-            <m.img
+            <m.div
               initial={{
                 opacity: 0,
                 y: 100,
@@ -62,10 +63,16 @@ function Home() {
                   duration: 0.8,
                 },
               }}
-              src="/assets/fadel.png"
               className="relative z-20 sm:w-[400px] w-[300px]"
-              alt=""
-            />
+            >
+              <ImageRenderer
+                url="/assets/fadel.png"
+                width={"auto"}
+                height={"auto"}
+                thumb=""
+                // alt=""
+              />
+            </m.div>
           </div>
           <div className="flex flex-col relative m-auto gap-4 flex-1 items-center">
             <div className="flex flex-col gap-2 items-center">

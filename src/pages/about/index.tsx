@@ -6,23 +6,24 @@ import "swiper/css/effect-cards";
 import GlobalContext from "../../context/GlobalContext";
 import { ABOUT } from "../../constants/data";
 import Overlay from "../../components/Overlay";
-import { AltButton } from "../../components/button/AltButton";
-import CoolImage from "../../components/CoolImage";
 import SectionBg from "../../components/SectionBg";
 import MyText from "../../components/MyText";
-import { useState } from "react";
-import RegisterModel from "./components/RegisterModel";
+import ImageRenderer from "../../components/Image";
 
 function About() {
   const { lan } = GlobalContext();
-  const [showenModel, setShowenModel] = useState(false);
   return (
     <div className="overflow-hidden about bg-gradient_main" id="about">
       <div className="relative overflow-hidden pt-24 pb-24">
         <SectionBg src="assets/22.jpg" opacity="opacity-100" />
         <div className="absolute w-full h-full top-0 left-0 bg-gradient_main opacity-60 z-10"></div>
         <div className="absolute left-0 bottom-0 opacity-60 z-10">
-          <img src="assets/sketch.png" alt="" width={900} />
+          <ImageRenderer
+            url="assets/sketch.png"
+            width={900}
+            height={"auto"}
+            thumb=""
+          />
         </div>
         <Container>
           <div className="flex flex-col gap-8">
@@ -70,20 +71,24 @@ function About() {
                 </div>
                 <MyText content={ABOUT[lan].info} delay={1} />
               </div>
-              <div className="logo_container p-10 bg-alt bg-opacity-50 rounded-full relative aspect-square w-[300px] h-[300px] flex justify-center items-center z-10">
-                <motion.img
-                  src="assets/logo.png"
-                  alt=""
-                  className="sm:w-[400px] w-[200px]"
+              <div className="logo_container p-10 bg-alt bg-opacity-50 rounded-full relative aspect-square sm:w-[300px] sm:h-[300px] w-[200px] flex justify-center items-center z-10">
+                <motion.div
+                  className="sm:w-[400px] w-[150px]"
                   whileInView={{
-                    x: [200, 0],
                     opacity: [0, 1],
                     transition: {
                       duration: 0.75,
                       ease: "easeInOut",
                     },
                   }}
-                />
+                >
+                  <ImageRenderer
+                    url="assets/logo.png"
+                    width={"auto"}
+                    height={"auto"}
+                    thumb={""}
+                  />
+                </motion.div>
                 <Overlay />
               </div>
             </div>

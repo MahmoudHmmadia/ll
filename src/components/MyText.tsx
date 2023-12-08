@@ -25,7 +25,7 @@ function MyText({
           stiffness: 100,
         },
       }}
-      className={`info tracking-wide ${med ? TEXT_MED : TEXT_SM} uppercase ${
+      className={`info tracking-wide md:text-base sm:text-sm text-xs uppercase ${
         center ? "text-center" : ""
       } text-gray-200`}
     >

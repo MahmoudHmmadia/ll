@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import ImageRenderer from "./Image";
 
 type props = {
   src: string;
@@ -13,7 +14,7 @@ function CoolImage({ src, children, width, overlay }: props) {
       {overlay && (
         <div className="absolute w-full h-full left-0 top-0 bg-alt z-10 opacity-20"></div>
       )}
-      <img src={src} alt="image" className="relative object-cover" />
+      <ImageRenderer url={src} height={"auto"} width={"auto"} thumb="" />
       {children}
     </div>
   );

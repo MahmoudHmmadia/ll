@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AltButton } from "../../components/button/AltButton";
 import MyText from "../../components/MyText";
 import { ABOUT } from "../../constants/data";
@@ -17,11 +17,10 @@ function Training() {
     <div className="relative pb-24 pt-24">
       {showenModel && <RegisterModel fn={setShowenModel} />}
       <SectionBg src="assets/55.jpg" opacity="opacity-100" />
-      {/* <div className="absolute w-full h-full top-0 left-0 bg-gradient_main opacity-60 z-10"></div> */}
       <Container>
         <SectionTitle title={ABOUT[lan].trainingTitle} />
-        <div className="flex justify-center items-center gap-8 lg:gap-10 lg:flex-row flex-col">
-          <div className="flex lg:flex-col z-10 flex-row justify-center gap-10 items-center">
+        <div className="flex justify-center items-center gap-8 lg:gap-10 lg:flex-row flex-col mt-6">
+          <div className="flex flex-col z-10  justify-center gap-10 items-center lg:w-auto w-full">
             <motion.div
               whileInView={{
                 x: [-200, 0],
@@ -31,11 +30,11 @@ function Training() {
                   ease: "easeInOut",
                 },
               }}
-              className="lg:w-[400px] md:w-[300px] relative"
+              className="w-full flex justify-end "
             >
               <CoolImage
                 src="assets/training1.png"
-                width="lg:w-[400px] md:w-[300px]"
+                width="lg:w-[400px] md:w-[300px] w-[200px] aspect-[2/1]"
               />
             </motion.div>
             <motion.div
@@ -47,11 +46,12 @@ function Training() {
                   ease: "easeInOut",
                 },
               }}
-              className="lg:w-[400px] md:w-[300px] relative"
+              className="w-full flex"
             >
-              <div className="absolute w-full h-full left-0 top-0 bg-alt z-10 opacity-20"></div>
-              <div className="absolute w-full h-full border-4 border-main -left-5 -bottom-5"></div>
-              <img src="assets/training2.png" className="relative" alt="" />
+              <CoolImage
+                src="assets/training2.png"
+                width="lg:w-[400px] md:w-[300px] w-[200px] aspect-[2/1]"
+              />
             </motion.div>
           </div>
           <div className="flex flex-col gap-6 lg:max-w-[700px] w-full flex-1 relative z-20 lg:pr-10 pr-0 py-10">

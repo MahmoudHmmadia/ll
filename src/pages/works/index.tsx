@@ -57,28 +57,32 @@ function Works() {
               },
 
               767: {
+                spaceBetween: 80,
                 slidesPerView: 2,
               },
               200: {
                 slidesPerView: 1,
+                spaceBetween: 100,
               },
             }}
           >
             {works.map((work) => (
               <SwiperSlide
                 key={work.title}
-                className="relative m-0 md:p-0 flex flex-col gap-24"
+                className="relative m-0 md:p-0 flex flex-col gap-24 items-center"
                 style={{
-                  marginRight: "20px",
+                  marginRight: "100px",
                 }}
               >
                 <CoolImage
                   src={work.imgSrc1}
-                  width="lg:w-auto w-[300px] aspect-[1/1.3] m-auto"
+                  width=" w-[200px] sm:w-[300px] aspect-[1/1.3]"
                 >
                   <span className="absolute left-0 top-10 text-black text-lg text-center bg-opacity-70 uppercase w-full bg-main p-2 flex justify-center items-center flex-col">
-                    <span>{work.title}</span>
-                    <span className=" text-3xl text-black">{work.country}</span>
+                    <span className="sm:text-base text-xs">{work.title}</span>
+                    <span className="sm:text-3xl text-xl text-black">
+                      {work.country}
+                    </span>
                   </span>
                 </CoolImage>
                 <div className="w-auto m-auto text-sm">

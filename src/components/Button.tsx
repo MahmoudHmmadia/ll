@@ -19,7 +19,7 @@ function Button({
   link,
   path,
 }: props) {
-  const STYLE = `py-3 px-4 transition-all tracking-wide ${bg} uppercase border border-main text-black w-full rounded-xl flex items-center gap-2 justify-center hover:bg-black hover:text-main hover:scale-90 `;
+  const STYLE = `py-3 px-4 transition-all tracking-wide ${bg} uppercase border border-main text-black w-full rounded-xl flex items-center gap-2 justify-center hover:bg-black hover:text-main hover:scale-90 sm:text-base text-xs`;
   return (
     <>
       {link && path ? (
