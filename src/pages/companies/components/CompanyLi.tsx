@@ -16,7 +16,11 @@ function CompanyLi({ content, title }: { content: string; title: string }) {
           ></span>
         </span>
       </div>
-      <p className="tracking-wide info md:text-base sm:text-sm text-xs w-full text-gray-200">
+      <p
+        className={`tracking-wide info md:text-base sm:text-sm text-xs w-full text-gray-200 ${
+          title === "أوقات العمل:" && "flex justify-end special"
+        }`}
+      >
         {content}
       </p>
     </div>

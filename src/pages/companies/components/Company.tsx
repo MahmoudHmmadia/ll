@@ -26,15 +26,15 @@ function Company({ company }: { company: company }) {
   return (
     <div
       key={company.address}
-      className={`flex flex-col p-4 uppercase bg-[#a5a4a4] bg-opacity-10 relative ${
-        company.cover === "assets/company1-cover.jpg" && "lg:-translate-y-10"
+      className={`flex flex-col p-4 uppercase bg-opacity-10 relative ${
+        company.cover === "assets/company1-cover1.jpg" && ""
       }`}
       style={{
         boxShadow: "0px 12px 20px 0px #000, 0px 6px 6px 0px #000",
       }}
     >
       <div
-        className={`absolute left-0 top-0 w-full h-full opacity-20 bg-cover bg-left-bottom  ${
+        className={`absolute left-0 top-0 w-full h-full opacity-10 bg-cover  bg-center ${
           company.cover == "assets/company-2-cover.jpeg" && "bg-right-bottom"
         }`}
         style={{

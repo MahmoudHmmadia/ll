@@ -58,13 +58,19 @@ export function useData() {
     },
   ];
   const companies = [
-    // {
-    //   name: COMPANIES[lan].company1.name,
-    //   time: COMPANIES[lan].company1.time,
-    //   address: COMPANIES[lan].company1.address,
-    //   image: COMPANIES[lan].company1.image,
-    //   phone: COMPANIES[lan].company1.phone,
-    // },
+    {
+      name: COMPANIES[lan].company1.name,
+      time: COMPANIES[lan].company1.time,
+      address: COMPANIES[lan].company1.address,
+      image: COMPANIES[lan].company1.image,
+      phone: COMPANIES[lan].company1.phone,
+      cover: "assets/company4-cover4.jpg",
+      google: "https://maps.app.goo.gl/nxnJoDriUKMpY6HQ7?g_st=iw",
+      tiktok: "https://www.tiktok.com/@abdalhmedbahbah?_t=8i4jMdjvQEI&_r=1",
+      facebook: "https://www.facebook.com/abdalhmedbahbah?mibextid=LQQJ4d",
+      instagram:
+        "https://instagram.com/abdalhmedbahbah1?igshid=YTQwZjQ0NmI0OA==",
+    },
 
     {
       image: COMPANIES[lan].company3.image,
@@ -72,7 +78,7 @@ export function useData() {
       time: COMPANIES[lan].company3.time,
       address: COMPANIES[lan].company3.address,
       phone: COMPANIES[lan].company3.phone,
-      cover: "assets/company-2-cover.jpeg",
+      cover: "assets/company2-cover2.jpg",
       google: "https://maps.app.goo.gl/kcnVHEa6WFFgPvr49?g_st=iw",
       instagram: "https://www.instagram.com/dasholz.ly/?hl=en",
       facebook: "https://www.facebook.com/p/DasHolzly-100076321297712/",
@@ -83,7 +89,7 @@ export function useData() {
       time: COMPANIES[lan].company2.time,
       address: COMPANIES[lan].company2.address,
       phone: COMPANIES[lan].company2.phone,
-      cover: "assets/company1-cover.jpg",
+      cover: "assets/company1-cover1.jpg",
       google: "https://maps.app.goo.gl/XFE5zoJcg8Rz3rJK7?g_st=iw",
       tiktok:
         "https://www.tiktok.com/@abdalhmedbahbah/video/7127757850817858822?lang=bn-IN",
@@ -95,7 +101,7 @@ export function useData() {
       address: COMPANIES[lan].company4.address,
       image: COMPANIES[lan].company4.image,
       phone: COMPANIES[lan].company4.phone,
-      cover: "assets/company-3-cover.jpeg",
+      cover: "assets/company3-cover3.jpg",
       instagram: "https://www.instagram.com/zan_for_furniture/?hl=en",
       google: "https://maps.app.goo.gl/xBGcuY11AY4gTps8A?g_st=iw",
       facebook: "https://www.facebook.com/officialzan/",
@@ -283,14 +289,15 @@ export const COMPANIES = {
     title: "companies",
     company1: {
       name: "AB Group",
-      time: "From ten in the morning until five in the evening",
-      address: "Znatah tripoli - libya",
+      time: "10:00 am - 5:00 pm",
+      address:
+        "Tripoli - New Zanata - opposite Kudo Restaurant - Al-Suljan Building - 4th floor",
       image: "assets/logo2.png",
       phone: "0918244414",
     },
     company2: {
       name: "AB disign boutique",
-      time: "From ten in the morning until five in the evening",
+      time: "10:00 am - 5:00 pm",
       address:
         "Tripoli - New Zanata - opposite Kudo Restaurant - Al-Suljan Building - 4th floor",
       image: "assets/2.png",
@@ -298,7 +305,7 @@ export const COMPANIES = {
     },
     company3: {
       name: "das holz kitchens",
-      time: "From ten in the morning until nine in the evening, except Friday",
+      time: "10:00 am - 9:00 pm, except Friday",
       address: "Tripoli - Zenata Road",
       image: "assets/1.png",
       phone: "0915170505 - 0918170505",
@@ -306,7 +313,7 @@ export const COMPANIES = {
     company4: {
       name: "ZAN furniture and decoration",
       address: "Znatah tripoli - libya",
-      time: "From ten in the morning until seven in the evening, except Friday",
+      time: "10:00 am - 7:00 pm, except Friday",
       image: "assets/3.png",
       phone: "0910204141 - 0910604141",
     },
@@ -315,14 +322,14 @@ export const COMPANIES = {
     title: "الشركات",
     company1: {
       name: "مجموعة AB",
-      time: "من العاشرة صباحاً حتى الخامسة مساءاً",
+      time: "10:00 am - 5:00 pm",
       address: "ليبيا - طرابلس - زناتة",
       image: "assets/logo2.png",
       phone: "0918244414",
     },
     company2: {
       name: "AB disign boutique",
-      time: "من العاشرة صباحاً حتى الخامسة مساءاً",
+      time: "10:00 am - 5:00 pm",
       address:
         " طرابلس - زناته الجديده - مقابل مطعم كودو - بنايه الصولجان - الطابق 4",
       image: "assets/2.png",
@@ -330,14 +337,14 @@ export const COMPANIES = {
     },
     company3: {
       name: "مطابخ داز هولز",
-      time: "من العاشرة صباحاً حتى التاسعة مساءاً ما عدا يوم الجمعة",
+      time: " 10 am – 9:00 pm / ما عدا يوم الجمعة",
       address: "طرابلس - طريق زناتة",
       image: "assets/1.png",
       phone: "0915170505 - 0918170505",
     },
     company4: {
       name: "شركة زان للمطابخ والأثاث وأعمال الديكور",
-      time: "من العاشرة صباحاً حتى السابعة مساءاً ما عدا يوم الجمعة",
+      time: " 10 am – 7:00 pm / ما عدا يوم الجمعة",
       image: "assets/3.png",
       phone: "0910204141 - 0910604141",
       address: "تاجوراء - ليبيا - 300 متر من الاشاره الضوئيه",
@@ -346,27 +353,41 @@ export const COMPANIES = {
 };
 export const FOOTER = {
   en: {
-    time: "From ten in the morning until five in the evening",
+    time: "10:00 am - 5:00 pm",
     InteriorDesignDepartment: "Interior design department: 0915904414",
-    DepartmentOfArchitecturalMapsDesign:
-      "Department of Architectural Maps Design: 0915944414",
+    DepartmentOfArchitecturalMapsDesign: "Architectural Department: 0915944414",
     address: "address: Znatah - Tripoli - Libya",
   },
 
   ar: {
-    time: "أوقات الدوام: من العاشرة صباحاً حتى الخامسة مساءاً",
+    time: "10:00 am - 5:00 pm",
     InteriorDesignDepartment: "قسم تصميم الداخلي: 0915904414",
-    DepartmentOfArchitecturalMapsDesign:
-      "قسم تصميم الخرائط المعمارية: 0915944414",
+    DepartmentOfArchitecturalMapsDesign: "التصميم المعماري: 0915944414",
     address: "العنوان: زناتة - طرابلس - ليبيا",
   },
 };
 
 export const social = [
-  { icon: SiGooglemaps, color: "#EA4335" },
-  { icon: SiFacebook, color: "#0165E1" },
-  { icon: SiInstagram, color: "#F77737" },
-  { icon: SiTiktok, color: "#ff0050" },
+  {
+    icon: SiGooglemaps,
+    color: "#EA4335",
+    to: "https://maps.app.goo.gl/nxnJoDriUKMpY6HQ7?g_st=iw",
+  },
+  {
+    icon: SiFacebook,
+    color: "#0165E1",
+    to: "https://www.facebook.com/abdalhmedbahbah?mibextid=LQQJ4d",
+  },
+  {
+    icon: SiInstagram,
+    color: "#F77737",
+    to: "https://instagram.com/abdalhmedbahbah1?igshid=YTQwZjQ0NmI0OA==",
+  },
+  {
+    icon: SiTiktok,
+    color: "#ff0050",
+    to: "https://www.tiktok.com/@abdalhmedbahbah?_t=8i4jMdjvQEI&_r=1",
+  },
 ];
 
 export const ABDALHAMED = {

@@ -122,7 +122,10 @@ html,
   }
 }
 .companies-boxes {
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  .special {
+    direction: ltr;
+  }
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   @media (max-width: 500px) {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }

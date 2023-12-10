@@ -21,12 +21,14 @@ function Footer() {
             <div className="md:w-6/12 w-full h-[1px] bg-zinc-600"></div>
             <div className="flex mt-4 justify-center sm:gap-8 gap-4 items-center">
               {social.map((li, index) => (
-                <div
+                <a
                   key={index}
-                  className="p-2 bg-zinc-950 bg-opacity-90 justify-center items-center rounded-full transition-all cursor-pointer"
+                  className={`p-2 bg-zinc-950 bg-opacity-90 justify-center items-center rounded-full transition-all cursor-pointer hover:bg-[${li.color}]`}
+                  href={li.to}
+                  target="blank"
                 >
                   <li.icon />
-                </div>
+                </a>
               ))}
             </div>
           </div>
